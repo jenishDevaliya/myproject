@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 4px solid #ed9460;
+            padding: 10px;
+            text-align: left;
+            color: antiquewhite;
+        }
+
+        th {
+            background-color: #0fd0bd;
+        }
+
+        td img {
+            width: 80px;
+            height: auto;
+        }
+
+        td {
+            background-color: #935388;
+        }
+    </style>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Description</th>
+    </tr>
+    <tr>
+        <td><img src="{% static 'images/product1.png' %}" alt="Product 1"></td>
+        <td>BANANA</td>
+        <td>200</td>
+        <td>A banana is a long, curved fruit with a yellow skin and soft, sweet flesh. It is rich in potassium and other essential nutrients.</td>
+    </tr>
+    <tr>
+        <td><img src="{% static 'images/product2.png' %}" alt="Product 2"></td>
+        <td>APPLE</td>
+        <td>500</td>
+        <td>An apple is a round fruit with red, green, or yellow skin and a crisp, sweet flesh. It is commonly grown and consumed worldwide.</td>
+    </tr>
+
+    <tr>
+        <td><img src="{% static 'images/product3.png' %}" alt="Product 3"></td>
+        <td>MANAGO</td>
+        <td>800</td>
+        <td>A mango is a sweet tropical fruit with juicy, fleshy flesh and a tough skin. It has a large inedible pit in the center.</td>
+    </tr>
+
+    <tr>
+        <td><img src="{% static 'images/product4.png' %}" alt="Product 4"></td>
+        <td>STRAWBEARYY</td>
+        <td>1200</td>
+        <td>A strawberry is a small, red fruit with a sweet flavor and tiny seeds on its surface. It is often enjoyed fresh or in desserts.</td>
+    </tr>
+
+    <tr>
+        <td><img src="{% static 'images/product5.png' %}" alt="Product 5"></td>
+        <td>WATER MELON</td>
+        <td>900</td>
+        <td>A watermelon is a large, juicy fruit with a green rind and sweet, red flesh. It is a popular summer fruit, especially for hydration.</td>
+    </tr>
+
+    <tr>
+        <td><img src="{% static 'images/product6.png' %}" alt="Product 6"></td>
+        <td>ALL FRUITS</td>
+        <td>3600</td>
+        <td>This package includes a variety of fruits, including apples, bananas, mangoes, strawberries, and watermelons. Perfect for a diverse and nutritious selection.</td>
+    </tr>
+    <!-- Add more rows as needed -->
+</table>
+
+</body>
+</html>

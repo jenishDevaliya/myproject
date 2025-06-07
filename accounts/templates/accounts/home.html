@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        /* static/styles.css */
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #841719;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0eb477;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            border: 4px solid #7a34c1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            max-width: 100px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .buy-button {
+            background-color: #0eb477;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #0b8e61;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}" alt="Home">Home</a></li>
+                <li><a href="{% url 'product' %}" alt="Product">Product</a></li>
+                <li><a href="{% url 'view_cart' %}" alt="Cart">Cart</a></li> <!-- Cart link added -->
+                <li><a href="{% url 'login' %}" alt="Login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="grid-container">
+            <section class="product">
+                <img src="{% static 'images/product1.png' %}" alt="Product 1">
+                <p>BANANA</p>
+                <button class="buy-button" onclick="addToCart('BANANA')">Buy</button>
+            </section>
+
+            <section class="product">
+                <img src="{% static 'images/product2.png' %}" alt="Product 2">
+                <p>APPLE</p>
+                <button class="buy-button" onclick="addToCart('APPLE')">Buy</button>
+            </section>
+
+            <section class="product">
+                <img src="{% static 'images/product3.png' %}" alt="Product 3">
+                <p>MANGO</p>
+                <button class="buy-button" onclick="addToCart('MANGO')">Buy</button>
+            </section>
+
+            <section class="product">
+                <img src="{% static 'images/product4.png' %}" alt="Product 4">
+                <p>STRAWBERRY</p>
+                <button class="buy-button" onclick="addToCart('STRAWBERRY')">Buy</button>
+            </section>
+
+            <section class="product">
+                <img src="{% static 'images/product5.png' %}" alt="Product 5">
+                <p>WATERMELON</p>
+                <button class="buy-button" onclick="addToCart('WATERMELON')">Buy</button>
+            </section>
+
+            <section class="product">
+                <img src="{% static 'images/product6.png' %}" alt="Product 6">
+                <p>ALL FRUITS</p>
+                <button class="buy-button" onclick="addToCart('ALL FRUITS')">Buy</button>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function addToCart(productName) {
+            alert(productName + ' has been added to your cart!');
+            // Here you can add code to actually handle adding the product to the cart
+            // For example, send an AJAX request or redirect to a cart page
+        }
+    </script>
+</body>
+</html>
